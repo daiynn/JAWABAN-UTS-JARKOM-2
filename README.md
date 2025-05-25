@@ -1,6 +1,9 @@
 # JAWABAN-UTS-JARKOM-2
 # 1. DHCP SERVER
-
+ cek
+```bash
+ip a
+```
 # set ip enp0s3
 sudo nano /etc/netplan/00-installer-config.yaml
 
