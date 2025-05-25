@@ -1,7 +1,7 @@
 # JAWABAN-UTS-JARKOM-2
-#1. DHCP SERVER
+# 1. DHCP SERVER
 
-#set ip enp0s3
+# set ip enp0s3
 sudo nano /etc/netplan/00-installer-config.yaml
 
 ubah ke:
@@ -19,7 +19,7 @@ network:
 lalu simpan dengan :
 sudo netplan apply
 
-#instal DHCP server
+# instal DHCP server
 sudo apt update 
 sudo apt install isc-dhcp-server 
 
@@ -55,7 +55,7 @@ ip a
 
 
 
-#2. DNS server
+# 2. DNS server
 instal bind9
 sudo apt update
 sudo apt install bind9 -y 
@@ -141,7 +141,7 @@ sudo named-checkzone 56.168.192.in-addr.arpa /etc/bind/db.192
 sudo systemctl restart bind9 
 
 
-#buka vm client
+# buka vm client
 Atur DNS client
 Edit file resolv.conf: 
 sudo nano /etc/resolv.conf 
@@ -154,7 +154,7 @@ nslookup derian.der
 dig derian.der 
 
 
-#3. firewall iptables
+# 3. firewall iptables
 
 bloki ping dari luar subnet 
 sudo iptables -A INPUT -p icmp -j DROP 
